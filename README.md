@@ -70,14 +70,16 @@ annotations, never canonical entities — a clean follow-up, not a core change.
 
 ## Footprint
 
-Full-history backfill from the deployment block (~5.86M) to the Arbitrum tip (~486.6M):
+Full-history backfill from the deployment block (5,856,156) to the Arbitrum tip (~486.6M):
 
 | metric | value |
 |--------|-------|
-| decoded events | ~680k across 36 tables |
-| sealed Parquet | ~130 MB |
+| decoded events | 838,502 across 36 tables |
+| sealed Parquet | 164 MB |
 | RSS (steady) | well within the 2 GB per-cursor budget (~300 MB observed for peer nests) |
-| backfill wall-clock | ~35 min, `--seal-direct` on a single RPC (factory nests seal sequentially) |
+| backfill wall-clock | 41m47s, 334 ev/s, `--seal-direct` on a single RPC (factory nests seal sequentially) |
+
+Live snapshot at round 4276: 233 transcoders (100 active), 5,036 delegators, 1,811 rounds, 7 polls.
 
 Small and cheap to run — comfortably co-tenantable next to other arbitrum-one nests on a modest
 8 GB VPS.
@@ -87,11 +89,12 @@ Small and cheap to run — comfortably co-tenantable next to other arbitrum-one 
 Validated against **on-chain ground truth** (the source the subgraph itself reads) via `cast` on
 Arbitrum One:
 
-| field | nest view | on-chain (`cast`) |
-|-------|-----------|-------------------|
-| active transcoders | `protocol.num_active_transcoders` = 100 | `BondingManager.getTranscoderPoolSize()` = 100 ✓ |
-| current round | `protocol.current_round` | `RoundsManager.currentRound()` = 4276 ✓ |
-| per-transcoder rounds/cuts | `transcoder` view | `BondingManager.getTranscoder(id)` ✓ |
+| field | nest view | on-chain (`cast`) | |
+|-------|-----------|-------------------|---|
+| active transcoders | `protocol.num_active_transcoders` = 100 | `BondingManager.getTranscoderPoolSize()` = 100 | ✓ |
+| current round | `protocol.current_round` = 4276 | `RoundsManager.currentRound()` = 4276 | ✓ |
+| rewardCut / feeShare / activationRound | `transcoder` view (top 3 by reward calls) | `BondingManager.getTranscoder(id)` | ✓ exact |
+| deactivationRound (never) | `null` | `2^256-1` sentinel | ✓ equivalent |
 
 Regression checks live in `checks/*.sql` (`nuthatch check`).
 
