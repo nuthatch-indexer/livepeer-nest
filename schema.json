@@ -1,0 +1,2447 @@
+{
+  "registry_hash": "0x954c90951c4371431c82168ef013f95bb9a69283a104e1ca81a35f2e598fda76",
+  "tables": [
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "newDelegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "oldDelegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "additionalAmount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "bondedAmount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Bond(address,address,address,uint256,uint256)",
+      "table": "bondingmanager__bond",
+      "topic0": "0xe5917769f276ddca9f2ee7c6b0b33e1d1e1b61008010ce622c632dd20d168a23"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "rewards",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "fees",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "startRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "endRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "EarningsClaimed(address,address,uint256,uint256,uint256,uint256)",
+      "table": "bondingmanager__earnings_claimed",
+      "topic0": "0xd7eab0765b772ea6ea859d5633baf737502198012e930f257f90013d9b211094"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "param",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ParameterUpdate(string)",
+      "table": "bondingmanager__parameter_update",
+      "topic0": "0x9f5033568d78ae30f29f01e944f97b2216493bd19d1b46d429673acff3dcd674"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "unbondingLockId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Rebond(address,address,uint256,uint256)",
+      "table": "bondingmanager__rebond",
+      "topic0": "0x9f5b64cc71e1e26ff178caaa7877a04d8ce66fde989251870e80e6fbee690c17"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "transcoder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Reward(address,uint256)",
+      "table": "bondingmanager__reward",
+      "topic0": "0x619caafabdd75649b302ba8419e48cccf64f37f1983ac4727cfb38b57703ffc9"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "transcoder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "activationRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "TranscoderActivated(address,uint256)",
+      "table": "bondingmanager__transcoder_activated",
+      "topic0": "0x65d72d782835d64c3287844a829608d5abdc7e864cc9affe96d910ab3db665e9"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "transcoder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "deactivationRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "TranscoderDeactivated(address,uint256)",
+      "table": "bondingmanager__transcoder_deactivated",
+      "topic0": "0xfee3e693fc72d0a0a673805f3e606c551f4c677b9072444b90dd2d0406bc995c"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "transcoder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "rewardCut",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "feeShare",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "TranscoderUpdate(address,uint256,uint256)",
+      "table": "bondingmanager__transcoder_update",
+      "topic0": "0x7346854431dbb3eb8e373c604abf89e90f4865b8447e1e2834d7b3e4677bf544"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "oldDelegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "newDelegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "oldUnbondingLockId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "newUnbondingLockId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "TransferBond(address,address,uint256,uint256,uint256)",
+      "table": "bondingmanager__transfer_bond",
+      "topic0": "0xf136b986590e86cf1abd7b6600186a7a1178ad3cbbdf0f3312e79f6214a2a567"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "unbondingLockId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "withdrawRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Unbond(address,address,uint256,uint256,uint256)",
+      "table": "bondingmanager__unbond",
+      "topic0": "0x2d5d98d189bee5496a08db2a5948cb7e5e786f09d17d0c3f228eb41776c24a06"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "recipient",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "WithdrawFees(address,address,uint256)",
+      "table": "bondingmanager__withdraw_fees_4f1b",
+      "topic0": "0x4f1b51dd7a2fcb861aa2670f668be66835c4ee12b4bbbf037e4d0018f39819e4"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        }
+      ],
+      "event": "WithdrawFees(address)",
+      "table": "bondingmanager__withdraw_fees_d371",
+      "topic0": "0xd3719f04262b628e1d01a6ed24707f542cda51f144b5271149c7d0419436d00c"
+    },
+    {
+      "alias": "bondingmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "unbondingLockId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "withdrawRound",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "WithdrawStake(address,uint256,uint256,uint256)",
+      "table": "bondingmanager__withdraw_stake",
+      "topic0": "0x1340f1a8f3d456a649e1a12071dfa15655e3d09252131d0f980c3b405cc8dd2e"
+    },
+    {
+      "alias": "controller",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        }
+      ],
+      "event": "Pause()",
+      "table": "controller__pause",
+      "topic0": "0x6985a02210a168e66602d3235cb6db0e70f92b3ba4d376a33c0f3d9434bff625"
+    },
+    {
+      "alias": "controller",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        }
+      ],
+      "event": "Unpause()",
+      "table": "controller__unpause",
+      "topic0": "0x7805862f689e2f13df9f062ff482ad3ad112aca9e0847911ed832e158c525b33"
+    },
+    {
+      "alias": "l2migrator",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "params",
+          "sol_type": "tuple",
+          "storage": "json"
+        }
+      ],
+      "event": "MigrateDelegatorFinalized((address,address,uint256,uint256,uint256,address))",
+      "table": "l2migrator__migrate_delegator_finalized",
+      "topic0": "0xab2cb96eeb8726c709227935b01f6a5c6f7e9b518ab69eda0670c7ceda752d1a"
+    },
+    {
+      "alias": "l2migrator",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "delegator",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "delegate",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "stake",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "fees",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "StakeClaimed(address,address,uint256,uint256)",
+      "table": "l2migrator__stake_claimed",
+      "topic0": "0xc08c27d872ca12215b2df3f441676fe2c084a204a487086d7436a4ac433d417a"
+    },
+    {
+      "alias": "livepeertoken",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "burner",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "value",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Burn(address,uint256)",
+      "table": "livepeertoken__burn",
+      "topic0": "0xcc16f5dbb4873280815c1ee09dbd06736cffcc184412cf7a71a0fdb75d397ca5"
+    },
+    {
+      "alias": "livepeertoken",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "to",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Mint(address,uint256)",
+      "table": "livepeertoken__mint",
+      "topic0": "0x0f6798a560793a54c3bcfe86a93cde1e73087d944c0ea20544137d4121396885"
+    },
+    {
+      "alias": "minter",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "param",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ParameterUpdate(string)",
+      "table": "minter__parameter_update",
+      "topic0": "0x9f5033568d78ae30f29f01e944f97b2216493bd19d1b46d429673acff3dcd674"
+    },
+    {
+      "alias": "minter",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "currentMintableTokens",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "currentInflation",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "SetCurrentRewardTokens(uint256,uint256)",
+      "table": "minter__set_current_reward_tokens",
+      "topic0": "0x39567a366345edf17f50c1967a31b597745186c4632f34c4f8ebe06b6890784d"
+    },
+    {
+      "alias": "minterv1",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "param",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ParameterUpdate(string)",
+      "table": "minterv1__parameter_update",
+      "topic0": "0x9f5033568d78ae30f29f01e944f97b2216493bd19d1b46d429673acff3dcd674"
+    },
+    {
+      "alias": "minterv1",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "currentMintableTokens",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "currentInflation",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "SetCurrentRewardTokens(uint256,uint256)",
+      "table": "minterv1__set_current_reward_tokens",
+      "topic0": "0x39567a366345edf17f50c1967a31b597745186c4632f34c4f8ebe06b6890784d"
+    },
+    {
+      "alias": "poll",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "voter",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "choiceID",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Vote(address,uint256)",
+      "table": "poll__vote",
+      "topic0": "0xf668ead05c744b9178e571d2edb452e72baf6529c8d72160e64e59b50d865bd0"
+    },
+    {
+      "alias": "pollcreator",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "poll",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "proposal",
+          "sol_type": "bytes",
+          "storage": "bytes"
+        },
+        {
+          "indexed": false,
+          "name": "endBlock",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "quorum",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "quota",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "PollCreated(address,bytes,uint256,uint256,uint256)",
+      "table": "pollcreator__poll_created",
+      "topic0": "0x8afbc4e1826cefcfc1e64fd5ff7d8484e700867fdbe36e9b6db047c010a6229e"
+    },
+    {
+      "alias": "roundsmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "round",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "blockHash",
+          "sol_type": "bytes32",
+          "storage": "fixed_bytes"
+        }
+      ],
+      "event": "NewRound(uint256,bytes32)",
+      "table": "roundsmanager__new_round",
+      "topic0": "0x22f2fc17c5daf07db2379b3a03a8ef20a183f761097a58fce219c8a14619e786"
+    },
+    {
+      "alias": "roundsmanager",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "param",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ParameterUpdate(string)",
+      "table": "roundsmanager__parameter_update",
+      "topic0": "0x9f5033568d78ae30f29f01e944f97b2216493bd19d1b46d429673acff3dcd674"
+    },
+    {
+      "alias": "serviceregistry",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "addr",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "serviceURI",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ServiceURIUpdate(address,string)",
+      "table": "serviceregistry__service_u_r_i_update",
+      "topic0": "0xfbb63068732c85741c9f8e61caffaabe038d577bfafd2d2dcc0e352a4f653a4c"
+    },
+    {
+      "alias": "ticketbroker",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "sender",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "DepositFunded(address,uint256)",
+      "table": "ticketbroker__deposit_funded",
+      "topic0": "0x5159e237d952190e68d5215430f305831be7c9c8776d1377c76679ae4773413f"
+    },
+    {
+      "alias": "ticketbroker",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "reserveHolder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "claimant",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "ReserveClaimed(address,address,uint256)",
+      "table": "ticketbroker__reserve_claimed",
+      "topic0": "0x5c2b394723f408a40a60335e24b71829642e35f350cebe2036a96a66e895ea98"
+    },
+    {
+      "alias": "ticketbroker",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "reserveHolder",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "amount",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "ReserveFunded(address,uint256)",
+      "table": "ticketbroker__reserve_funded",
+      "topic0": "0xb52b99b9e83551fcbd069b559cc3e823e2a1a3bad8ece46561ea77524394c850"
+    },
+    {
+      "alias": "ticketbroker",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "sender",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": true,
+          "name": "recipient",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "faceValue",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "winProb",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "senderNonce",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "recipientRand",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "auxData",
+          "sol_type": "bytes",
+          "storage": "bytes"
+        }
+      ],
+      "event": "WinningTicketRedeemed(address,address,uint256,uint256,uint256,uint256,bytes)",
+      "table": "ticketbroker__winning_ticket_redeemed",
+      "topic0": "0xc389eb51ed006dbf2528507f010efdf5225ea596e1e1741d74f550dab1925ee7"
+    },
+    {
+      "alias": "ticketbroker",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "sender",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "deposit",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "reserve",
+          "sol_type": "uint256",
+          "storage": "word32"
+        }
+      ],
+      "event": "Withdrawal(address,uint256,uint256)",
+      "table": "ticketbroker__withdrawal",
+      "topic0": "0xdf273cb619d95419a9cd0ec88123a0538c85064229baa6363788f743fff90deb"
+    },
+    {
+      "alias": "treasury",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "proposalId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "proposer",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "targets",
+          "sol_type": "address[]",
+          "storage": "json"
+        },
+        {
+          "indexed": false,
+          "name": "values",
+          "sol_type": "uint256[]",
+          "storage": "json"
+        },
+        {
+          "indexed": false,
+          "name": "signatures",
+          "sol_type": "string[]",
+          "storage": "json"
+        },
+        {
+          "indexed": false,
+          "name": "calldatas",
+          "sol_type": "bytes[]",
+          "storage": "fixed_bytes"
+        },
+        {
+          "indexed": false,
+          "name": "voteStart",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "voteEnd",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "description",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "ProposalCreated(uint256,address,address[],uint256[],string[],bytes[],uint256,uint256,string)",
+      "table": "treasury__proposal_created",
+      "topic0": "0x7d84a6263ae0d98d3329bd7b46bb4e8d6f98cd35a7adb45c274c8b7fd5ebd5e0"
+    },
+    {
+      "alias": "treasury",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "voter",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "proposalId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "support",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "weight",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "reason",
+          "sol_type": "string",
+          "storage": "string"
+        }
+      ],
+      "event": "VoteCast(address,uint256,uint8,uint256,string)",
+      "table": "treasury__vote_cast",
+      "topic0": "0xb8e138887d0aa13bab447e82de9d5c1777041ecd21ca36ba824ff1e6c07ddda4"
+    },
+    {
+      "alias": "treasury",
+      "columns": [
+        {
+          "indexed": false,
+          "name": "block_number",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "block_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "block_timestamp",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "tx_hash",
+          "sol_type": "implicit",
+          "storage": "bytes32"
+        },
+        {
+          "indexed": false,
+          "name": "log_index",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "address",
+          "sol_type": "implicit",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "_seq",
+          "sol_type": "implicit",
+          "storage": "u64"
+        },
+        {
+          "indexed": true,
+          "name": "voter",
+          "sol_type": "address",
+          "storage": "address"
+        },
+        {
+          "indexed": false,
+          "name": "proposalId",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "support",
+          "sol_type": "uint8",
+          "storage": "u64"
+        },
+        {
+          "indexed": false,
+          "name": "weight",
+          "sol_type": "uint256",
+          "storage": "word32"
+        },
+        {
+          "indexed": false,
+          "name": "reason",
+          "sol_type": "string",
+          "storage": "string"
+        },
+        {
+          "indexed": false,
+          "name": "params",
+          "sol_type": "bytes",
+          "storage": "bytes"
+        }
+      ],
+      "event": "VoteCastWithParams(address,uint256,uint8,uint256,string,bytes)",
+      "table": "treasury__vote_cast_with_params",
+      "topic0": "0xe2babfbac5889a709b63bb7f598b324e08bc5a4fb9ec647fb3cbc9ec07eb8712"
+    }
+  ]
+}

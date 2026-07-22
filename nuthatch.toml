@@ -1,0 +1,113 @@
+[nest]
+name = "livepeer"
+chain = "arbitrum-one"
+chain_id = 42161
+rpc_urls = [
+    "https://arb1.arbitrum.io/rpc",
+    "https://arbitrum-one-rpc.publicnode.com",
+    "https://arbitrum.drpc.org",
+    "https://arb-pokt.nodies.app",
+]
+schema_version = 1
+
+# Contracts + events mirror the official Livepeer subgraph (livepeer/subgraph,
+# networks.yaml @ arbitrum-one). ABIs are the vendored *implementation* ABIs from
+# that repo — Sourcify only exposes the ManagerProxy ABI, which omits every real event.
+
+[[contracts]]
+alias = "controller"
+address = "0xd8e8328501e9645d16cf49539efc04f734606ee4"
+start_block = 5856334
+abi = "abis/controller.json"
+events = ["Pause", "Unpause"]
+
+[[contracts]]
+alias = "bondingmanager"
+address = "0x35bcf3c30594191d53231e4ff333e8a770453e40"
+start_block = 5856381
+abi = "abis/bondingmanager.json"
+events = [
+    "TranscoderUpdate", "TranscoderActivated", "TranscoderDeactivated",
+    "EarningsClaimed", "Bond", "Unbond", "Rebond", "WithdrawStake",
+    "Reward", "WithdrawFees", "ParameterUpdate", "TransferBond",
+]
+
+[[contracts]]
+alias = "roundsmanager"
+address = "0xdd6f56dcc28d3f5f27084381fe8df634985cc39f"
+start_block = 5856394
+abi = "abis/roundsmanager.json"
+events = ["NewRound", "ParameterUpdate"]
+
+[[contracts]]
+alias = "livepeertoken"
+address = "0x289ba1701c2f088cf0faf8b3705246331cb8a839"
+start_block = 5856156
+abi = "abis/livepeertoken.json"
+events = ["Mint", "Burn"]
+
+[[contracts]]
+alias = "minterv1"
+address = "0x4969dccf5186e1c49411638fc8a2a020fdab752e"
+start_block = 5856338
+abi = "abis/minterv1.json"
+events = ["SetCurrentRewardTokens", "ParameterUpdate"]
+
+[[contracts]]
+alias = "minter"
+address = "0xc20de37170b45774e6cd3d2304017fc962f27252"
+start_block = 6253359
+abi = "abis/minter.json"
+events = ["SetCurrentRewardTokens", "ParameterUpdate"]
+
+[[contracts]]
+alias = "ticketbroker"
+address = "0xa8bb618b1520e284046f3dfc448851a1ff26e41b"
+start_block = 5856357
+abi = "abis/ticketbroker.json"
+events = [
+    "WinningTicketRedeemed", "DepositFunded", "ReserveFunded",
+    "ReserveClaimed", "Withdrawal",
+]
+
+[[contracts]]
+alias = "serviceregistry"
+address = "0xc92d3a360b8f9e083ba64de15d95cf8180897431"
+start_block = 5860363
+abi = "abis/serviceregistry.json"
+events = ["ServiceURIUpdate"]
+
+[[contracts]]
+alias = "pollcreator"
+address = "0x8bb50806d60c492c0004dad5d9627daa2d9732e6"
+start_block = 5857075
+abi = "abis/pollcreator.json"
+events = ["PollCreated"]
+
+[[contracts]]
+alias = "treasury"
+address = "0xcfe4e2879b786c3aa075813f0e364bb5accb6aa0"
+start_block = 139793525
+abi = "abis/treasury.json"
+events = ["ProposalCreated", "VoteCast", "VoteCastWithParams"]
+
+[[contracts]]
+alias = "l2migrator"
+address = "0x148d5b6b4df9530c7c76a810bd1cdf69ec4c2085"
+start_block = 5864923
+abi = "abis/l2migrator.json"
+events = ["MigrateDelegatorFinalized", "StakeClaimed"]
+
+# Governance polls are factory-deployed: PollCreator.PollCreated(indexed poll, …)
+# spawns a Poll contract that emits Vote(indexed voter, uint256 choiceID).
+[[templates]]
+name = "poll"
+abi = "abis/poll.json"
+filter = "Vote"
+
+[[factories]]
+watch = "pollcreator"
+event = "PollCreated"
+child_param = "poll"
+template = "poll"
+start = 5857075
